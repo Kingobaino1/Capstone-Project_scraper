@@ -3,7 +3,7 @@ require 'httparty'
 
 # scraper class
 class Scraper
-  attr_accessor :url, :gender, :category, :ip_address
+  attr_reader :url, :gender, :category, :ip_address
   def initialize(gender, category, ip_address)
     @gender = gender
     @category = category
@@ -36,23 +36,5 @@ class Scraper
 
   def product_price
     scrape.css('div.product-price').map(&@my_proc)
-  end
-end
-
-# get output class
-class Output
-  def output(arr1, arr2)
-    i = 0
-    while i < arr1.length
-      puts "---------#{i + 1}--------"
-      puts "product: #{arr1[i]}"
-      puts "price: #{arr2[i]}"
-      puts "\n"
-      i += 1
-    end
-  end
-
-  def valid_input(num)
-    num != 1 && num != 2
   end
 end

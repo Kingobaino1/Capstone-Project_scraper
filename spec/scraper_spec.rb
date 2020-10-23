@@ -1,4 +1,4 @@
-require './lib/scraper'
+require_relative '../lib/scraper'
 
 describe Scraper do
   let(:scraper) { Scraper.new('mens', 'lifestyle', '-13jrmznik1zy7ok') }

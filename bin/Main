@@ -1,6 +1,24 @@
 #!/usr/bin/env ruby
 
-require './lib/scraper.rb'
+require_relative '../lib/scraper'
+
+# get output class
+class Output
+  def output(arr1, arr2)
+    i = 0
+    while i < arr1.length
+      puts "---------#{i + 1}--------"
+      puts "product: #{arr1[i]}"
+      puts "price: #{arr2[i]}"
+      puts "\n"
+      i += 1
+    end
+  end
+
+  def valid_input?(num)
+    num != 1 && num != 2
+  end
+end
 
 scrape_m_style = Scraper.new('mens', 'lifestyle', '-13jrmznik1zy7ok')
 scrape_m_foot = Scraper.new('mens', 'football', '-1gdj0znik1zy7ok')
@@ -12,7 +30,7 @@ puts 'Select the gender (by the number) you want to check'
 puts '1. Men shoe'
 puts '2. Women shoe'
 gender = gets.chomp.to_i
-while get_result.valid_input(gender)
+while get_result.valid_input?(gender)
   puts 'Invalid input'
   gender = gets.chomp.to_i
 end
@@ -21,7 +39,7 @@ puts 'Select the category (by the number) you want to check'
 puts '1. LifeStyle'
 puts '2. Football'
 category = gets.chomp.to_i
-while get_result.valid_input(category)
+while get_result.valid_input?(category)
   puts 'Invalid input'
   category = gets.chomp.to_i
 end
