@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 # get output class
 class Output
   def output(arr1, arr2)
