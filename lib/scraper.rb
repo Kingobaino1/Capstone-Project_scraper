@@ -22,4 +22,8 @@ class Scraper
     product_items = parse_url.css('.product-grid__items').css('.product-card')
     product_items.css('div.product-card__body').css('figure')
   end
+
+  def product_name
+    scrape.css('div.product-card__title').map{ |num| num.text }
+  end
 end
