@@ -1,10 +1,10 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# TIC-TAC-TOE Game
+# Scraper Project
 
-> Scraper Project
+> Scraper
 
-Scraper is a way of getting data from websites
+Scraper is a way of getting data from websites. In this project we scraped data from nike.com for both men and women shoes in the categories of lifestyle and football.
 
 # Built with
 
