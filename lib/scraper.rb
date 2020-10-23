@@ -32,12 +32,16 @@ class Scraper
     scrape.css('div.product-price').map{ |num| num.text }
   end
 
-  def output(array)
+end
+
+class Output
+  def output(arr1, arr2)
     i = 0
-    while i < array.length
-      puts i + 1
-      puts "product: #{product_name[i]}"
-      puts "price: #{product_price[i]}"
+    while i < arr1.length
+      puts "---------#{i + 1}--------"
+      puts "product: #{arr1[i]}"
+      puts "price: #{arr2[i]}"
+      puts "\n"
       i += 1
     end
   end
