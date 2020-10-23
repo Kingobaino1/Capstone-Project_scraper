@@ -30,11 +30,11 @@ class Scraper
   end
 
   def product_name
-    scrape.css('div.product-card__title').map{ |num| num.text }
+    scrape.css('div.product-card__title').map { |num| num.text }
   end
 
   def product_price
-    scrape.css('div.product-price').map{ |num| num.text }
+    scrape.css('div.product-price').map { |num| num.text }
   end
 end
 
@@ -49,5 +49,9 @@ class Output
       puts "\n"
       i += 1
     end
+  end
+
+  def valid_input(num)
+    num != 1 && num != 2
   end
 end
