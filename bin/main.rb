@@ -1,3 +1,5 @@
+#!/usr/bin/env ruby
+
 require './lib/scraper.rb'
 
 scrape_m_style = Scraper.new('mens', 'lifestyle', '-13jrmznik1zy7ok')
