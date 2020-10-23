@@ -26,4 +26,8 @@ class Scraper
   def product_name
     scrape.css('div.product-card__title').map{ |num| num.text }
   end
+
+  def product_price
+    scrape.css('div.product-price').map{ |num| num.text }
+  end
 end
