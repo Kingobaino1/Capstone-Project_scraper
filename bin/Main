@@ -1,24 +1,8 @@
 #!/usr/bin/env ruby
+# frozen_string_literal: true
 
 require_relative '../lib/scraper'
-
-# get output class
-class Output
-  def output(arr1, arr2)
-    i = 0
-    while i < arr1.length
-      puts "---------#{i + 1}--------"
-      puts "product: #{arr1[i]}"
-      puts "price: #{arr2[i]}"
-      puts "\n"
-      i += 1
-    end
-  end
-
-  def valid_input?(num)
-    num != 1 && num != 2
-  end
-end
+require_relative '../lib/output'
 
 scrape_m_style = Scraper.new('mens', 'lifestyle', '-13jrmznik1zy7ok')
 scrape_m_foot = Scraper.new('mens', 'football', '-1gdj0znik1zy7ok')
