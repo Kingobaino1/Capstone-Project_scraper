@@ -34,4 +34,3 @@ elsif gender == 2 && category == 1
 elsif gender == 2 && category == 2
   get_result.output(scrape_w_foot.product_name, scrape_w_foot.product_price)
 end
-p scrape_m_foot.scrape
