@@ -1,6 +1,7 @@
 require 'nokogiri'
 require 'httparty'
 
+# scraper class
 class Scraper
   attr_accessor :url, :gender, :category, :ip_address
   def initialize(gender, category, ip_address)
@@ -15,9 +16,13 @@ class Scraper
     Nokogiri::HTML(unparsed_page)
   end
 
+  private
+
   def parse_url
     get_url(@url)
   end
+
+  public
 
   def scrape
     product_items = parse_url.css('.product-grid__items').css('.product-card')
@@ -31,9 +36,9 @@ class Scraper
   def product_price
     scrape.css('div.product-price').map{ |num| num.text }
   end
-
 end
 
+# get output class
 class Output
   def output(arr1, arr2)
     i = 0
